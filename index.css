@@ -1,0 +1,163 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(233, 47%, 23%);
+
+  --hover-transition: 0.1s ease-in;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, dd, dl {
+
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+p {
+  font-size: calc(16 / 16 * 1rem);
+}
+
+a {
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+a:hover {
+  color: #766CF1;
+  text-decoration: none;
+  transition: color var(--hover-transition);
+}
+
+main {
+  min-height: 100%;
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--pale-blue);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 12px;
+  font-weight: 900;
+  padding: 16px 0;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn.btn-primary {
+  background-color: var(--bright-blue);
+  color: white;
+  box-shadow: 6px 6px 20px hsla(245, 75%, 52%, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: #766CF1;
+  transition: background-color var(--hover-transition);
+}
+
+.btn.btn-text {
+  color: var(--desaturated-blue);
+  background-color: transparent;
+}
+
+.btn-text:hover {
+  color: var(--dark-blue);
+  transition: color var(--hover-transition);
+}
+
+article {
+  max-width: 325px;
+  background-color: white;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 8px 8px 24px rgba(5, 5, 5, 0.1);
+
+}
+
+.card__body {
+  padding: 24px;
+}
+
+article img {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+
+article h1 {
+  margin-bottom: 24px;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+article p {
+  line-height: 1.50rem;
+  color: var(--desaturated-blue);
+  margin-bottom: 24px;
+}
+
+.card__pricing-plan {
+  padding: 16px 14px;
+  background-color: var(--very-pale-blue);
+  border-radius: 12px;
+  font-size: calc(14 / 16 * 1rem);
+  display: flex;
+  align-items: center;
+}
+
+.card__pricing-plan__icon {
+  line-height: 0;
+  margin-right: 16px;
+}
+
+.card__pricing-plan dl {
+  margin-right: auto;
+}
+
+article dt {
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+article dd {
+  color: var(--desaturated-blue);
+}
+
+.card__action-buttons {
+  margin-top: 24px;
+}
+
+.card__action-buttons button:first-of-type {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+  main {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
+
+  .card__body {
+    padding: 40px 40px;
+
+  }
+
+  article {
+    max-width: 400px;
+  }
+}
